@@ -1,4 +1,4 @@
-- **Keystone**
+## **Keystone**
 ```
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' \
 IDENTIFIED BY 'corgi1208';
@@ -24,7 +24,7 @@ export OS_AUTH_URL=http://controller:5000/v3
 export OS_IDENTITY_API_VERSION=3
 ```
 
-- **Glance**
+## **Glance**
 ```
 GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' \
   IDENTIFIED BY 'corgi1208';
@@ -32,9 +32,39 @@ GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' \
   IDENTIFIED BY 'corgi1208';
 ```
 
-- **Placement**
+## **Placement**
 ```
 GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'localhost' \
   IDENTIFIED BY 'corgi1208';
 GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'%' \
+  IDENTIFIED BY 'corgi1208';
+```
+
+## **Nova**
+- **controller**
+```
+GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'localhost' \
+  IDENTIFIED BY 'corgi1208';
+GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'%' \
+  IDENTIFIED BY 'corgi1208';
+
+GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' \
+  IDENTIFIED BY 'corgi1208';
+GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' \
+  IDENTIFIED BY 'corgi1208';
+
+GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'localhost' \
+  IDENTIFIED BY 'corgi1208';
+GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'%' \
+  IDENTIFIED BY 'corgi1208';
+```
+
+- **compute**
+
+## **Neutron**
+- **controller**
+```
+GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' \
+  IDENTIFIED BY 'corgi1208';
+GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' \
   IDENTIFIED BY 'corgi1208';

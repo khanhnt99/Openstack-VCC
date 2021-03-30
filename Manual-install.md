@@ -68,3 +68,46 @@ GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' \
   IDENTIFIED BY 'corgi1208';
 GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' \
   IDENTIFIED BY 'corgi1208';
+```
+## Launch Instance
+```
+openstack subnet create --network selfservice \
+  --dns-nameserver 8.8.4.4 --gateway 192.168.10.1 \
+  --subnet-range 192.168.10.0/24 selfservice
+```
+```
+root@controller:~# openstack subnet create --network selfservice \
+>   --dns-nameserver 8.8.4.4 --gateway 192.168.10.1 \
+>   --subnet-range 192.168.10.0/24 selfservice
++-------------------+--------------------------------------+
+| Field             | Value                                |
++-------------------+--------------------------------------+
+| allocation_pools  | 192.168.10.2-192.168.10.254          |
+| cidr              | 192.168.10.0/24                      |
+| created_at        | 2021-03-30T16:38:26Z                 |
+| description       |                                      |
+| dns_nameservers   | 8.8.4.4                              |
+| enable_dhcp       | True                                 |
+| gateway_ip        | 192.168.10.1                         |
+| host_routes       |                                      |
+| id                | 41cdb3ee-57cb-47bf-b992-aa60cc4acf88 |
+| ip_version        | 4                                    |
+| ipv6_address_mode | None                                 |
+| ipv6_ra_mode      | None                                 |
+| name              | selfservice                          |
+| network_id        | 1f04cbcb-16fb-41b8-adb4-b45ab51653cf |
+| project_id        | bad9fbf8fe9c4537946a8bca2e0685af     |
+| revision_number   | 0                                    |
+| segment_id        | None                                 |
+| service_types     |                                      |
+| subnetpool_id     | None                                 |
+| tags              |                                      |
+| updated_at        | 2021-03-30T16:38:26Z                 |
++-------------------+--------------------------------------+
+```
+
+```
+openstack server create --flavor m1.nano --image cirros \
+  --nic net-id=1f04cbcb-16fb-41b8-adb4-b45ab51653cf --security-group default \
+  --key-name mykey selfservice-instance
+```

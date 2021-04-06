@@ -1,0 +1,2 @@
+- nova-status upgrade check
+- openstack catalog list

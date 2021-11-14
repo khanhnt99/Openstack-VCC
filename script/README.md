@@ -6,6 +6,7 @@
     + https://github.com/TrongTan124/install-OpenStack
 - Preinstall
     + Cài đặt git.
-    + Cấu hình netplan network.
+    + Thay đổi các giá trị biến trong file config.
+    + Sửa đổi file `/etc/cloud/cloud.cfg` để đổi hostname.
     + Trên controller: `./controller-all.sh`
     + Trên compute: `./compute-all.sh`

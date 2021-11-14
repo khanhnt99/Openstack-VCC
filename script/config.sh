@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Author Nguyen Trong Tan
+# Edit by khanhnt99
 ########################################
 #### Set local variable for scripts ####
 ########################################

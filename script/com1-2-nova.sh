@@ -1,4 +1,6 @@
 #!/bin/bash
+# Author Nguyen Trong Tan
+# Edit by khanhnt99
 
 source function.sh
 source config.sh

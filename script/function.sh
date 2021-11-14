@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Author Nguyen Trong Tan
+# Edit by khanhnt99
 # Ham dinh nghia mau cho cac thong bao hien ra man hinh
 function echocolor {
     echo "$(tput setaf 2)##### $1 #####$(tput sgr0)"

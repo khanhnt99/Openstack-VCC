@@ -6,7 +6,7 @@
     + https://github.com/TrongTan124/install-OpenStack
 - Preinstall
     + Cài đặt git.
-    + Thay đổi các giá trị biến trong file config.
+    + Thay đổi các giá trị biến trong file config.sh (lưu ý trong từng folder có những file config.sh riêng biệt).
     + Sửa đổi file `/etc/cloud/cloud.cfg` để đổi hostname.
     + Trên controller: `./controller-all.sh`
     + Trên compute1: `./compute1-all.sh`

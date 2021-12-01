@@ -12,3 +12,6 @@ source com1-1-environment.sh
 
 echocolor "Nova"
 source com1-2-nova.sh
+
+echocolor "Neutron"
+source com1-3-neutron.sh

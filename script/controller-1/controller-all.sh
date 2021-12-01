@@ -21,3 +21,6 @@ source ctl-4-placement.sh
 
 echocolor "Nova"
 source ctl-5-nova.sh
+
+echocolor "Neutron"
+source ctl-6-neutron.sh
